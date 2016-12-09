@@ -34,6 +34,13 @@
     <style_entry name="place_click" value="/Crafting/craft_place_item"/>
     <style_entry name="remove_waypoint" value="/UI/ui_waypoint_delete"/>
   </global>
+  
+	<style name="SMXDayTimeFrame.window" type="window">
+		<style_entry name="pos" value="12,-50"/>
+		<style_entry name="size" value="100,100"/>
+		<style_entry name="anchor" value="LeftBottom"/>
+	</style>
+  
   <style type="label">
     <style_entry name="color" value="[labelColor]"/>
     <style_entry name="font_face" value="AgencyB_32p"/>
@@ -42,7 +49,7 @@
     <style_entry name="effect" value="none"/>
     <style_entry name="pivot" value="topleft"/>
     <style_entry name="text" value=""/>
-    <style_entry name="upper_case" value="true"/>
+    <style_entry name="upper_case" value="false"/>
   </style>
   <style type="label" name="protection">
     <style_entry name="width" value="50"/>
@@ -248,6 +255,7 @@
     <style_entry name="pos" value="31,-21"/>
     <style_entry name="depth" value="3"/>
     <style_entry name="name" value="Crafting"/>
+    <style_entry name="atlas" value="ItemIconAtlas"/>
     <style_entry name="sprite" value="ui_game_symbol_hammer"/>
     <style_entry name="width" value="32"/>
     <style_entry name="height" value="32"/>
@@ -261,6 +269,7 @@
     <style_entry name="pos" value="76,-21"/>
     <style_entry name="depth" value="3"/>
     <style_entry name="name" value="Character"/>
+    <style_entry name="atlas" value="ItemIconAtlas"/>
     <style_entry name="sprite" value="ui_game_symbol_character"/>
     <style_entry name="width" value="32"/>
     <style_entry name="height" value="32"/>
@@ -274,6 +283,7 @@
     <style_entry name="pos" value="126,-21"/>
     <style_entry name="depth" value="3"/>
     <style_entry name="name" value="Map"/>
+    <style_entry name="atlas" value="ItemIconAtlas"/>
     <style_entry name="sprite" value="ui_game_symbol_map"/>
     <style_entry name="width" value="32"/>
     <style_entry name="height" value="32"/>
@@ -287,6 +297,7 @@
     <style_entry name="pos" value="171,-21"/>
     <style_entry name="depth" value="3"/>
     <style_entry name="name" value="Skills"/>
+    <style_entry name="atlas" value="ItemIconAtlas"/>
     <style_entry name="sprite" value="ui_game_symbol_skills"/>
     <style_entry name="width" value="32"/>
     <style_entry name="height" value="32"/>
@@ -300,6 +311,7 @@
     <style_entry name="pos" value="426,-21"/>
     <style_entry name="depth" value="3"/>
     <style_entry name="name" value="Quests"/>
+    <style_entry name="atlas" value="ItemIconAtlas"/>
     <style_entry name="sprite" value="ui_game_symbol_quest"/>
     <style_entry name="width" value="32"/>
     <style_entry name="height" value="32"/>
@@ -313,6 +325,7 @@
     <style_entry name="pos" value="476,-21"/>
     <style_entry name="depth" value="3"/>
     <style_entry name="name" value="Journal"/>
+    <style_entry name="atlas" value="ItemIconAtlas"/>
     <style_entry name="sprite" value="ui_game_symbol_pen"/>
     <style_entry name="width" value="32"/>
     <style_entry name="height" value="32"/>
@@ -326,6 +339,7 @@
     <style_entry name="pos" value="526,-21"/>
     <style_entry name="depth" value="3"/>
     <style_entry name="name" value="Players"/>
+    <style_entry name="atlas" value="ItemIconAtlas"/>
     <style_entry name="sprite" value="ui_game_symbol_players"/>
     <style_entry name="width" value="32"/>
     <style_entry name="height" value="32"/>
@@ -339,6 +353,7 @@
     <style_entry name="pos" value="576,-21"/>
     <style_entry name="depth" value="3"/>
     <style_entry name="name" value="Creative"/>
+    <style_entry name="atlas" value="ItemIconAtlas"/>
     <style_entry name="sprite" value="ui_game_symbol_lightbulb"/>
     <style_entry name="width" value="32"/>
     <style_entry name="height" value="32"/>
@@ -421,6 +436,7 @@
   <style name="compass.window.icon.compass" type="sprite">
     <style_entry name="depth" value="3"/>
     <style_entry name="name" value="crafting"/>
+    <style_entry name="atlas" value="ItemIconAtlas"/>
     <style_entry name="sprite" value="ui_game_symbol_compass"/>
     <style_entry name="width" value="32"/>
     <style_entry name="height" value="32"/>
@@ -446,6 +462,7 @@
   <style name="crafting.info.window" type="window">
     <style_entry name="valid_color" value="[green]"/>
     <style_entry name="invalid_color" value="[red]"/>
+    <style_entry name="atlas" value="ItemIconAtlas"/>
     <style_entry name="valid_sprite" value="ui_game_symbol_check"/>
     <style_entry name="invalid_sprite" value="ui_game_symbol_x"/>
     <style_entry name="width" value="603"/>
