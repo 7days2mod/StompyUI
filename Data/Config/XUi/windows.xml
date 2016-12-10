@@ -1,18 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <windows>
   <window name="HUDLeftStatBars">
-    <grid pos="9,242" rows="1" cols="1" width="168" cell_width="86" cell_height="46" repeat_content="false" side="left">
-      <!-- ActiveBuffList, BuffPopoutList -->
-      <grid controller="BuffPopoutList" pos="9, 9" rows="1" cols="1" width="168" cell_width="168" cell_height="48" repeat_content="false" side="left" pivot="BottomLeft">
-        <rect width="168" height="43" name="item" visible="false" disableautobackground="true" controller="ActiveBuffEntry">
-          <sprite depth="3" pos="0,0" name="Background" atlas="ItemIconAtlas" sprite="ui_game_popup" height="43" width="162" flip="Horizontally" color="[transparent]"/>
-          <sprite depth="4" name="Icon" atlas="ItemIconAtlas" sprite="{bufficon|once}" size="36,32" pos="8,-4" color="[transparent]"/>
-          <label depth="6" name="TextContent" pos="50,-12" font_size="20" color="[white]" pivot="topleft" height="30"/>
-          <label depth="8" pos="90,-12" font_size="20" color="[white]" pivot="topleft" height="30" text="x {buffname|once}"/>
-          <label depth="8" pos="130,-12" font_size="20" color="[white]" pivot="topleft" height="30" text="{buffdisplayinfo}"/>
+    <!-- ActiveBuffList -->
+    <grid Controller="ActiveBuffWindow" pos="9,358" rows="1" cols="1" width="168" cell_width="168" cell_height="46" repeat_content="false" side="left">
+      <button name="pageDown" pos="0,0" height="0" width="0"/>
+      <label name="pageNumber" pos="0,0" height="0" width="0"/>
+      <button name="pageUp" pos="0,0" height="0" width="0"/>
+      <grid controller="ActiveBuffList" pos="9, 9" rows="6" cols="1" width="168" cell_width="168" cell_height="48" repeat_content="true" side="left" pivot="BottomLeft">
+        <rect controller="ActiveBuffEntry" width="168" height="43" name="item" visible="false" disableautobackground="true">
+          <sprite depth="3" pos="0,0" name="Background" atlas="ItemIconAtlas" sprite="ui_game_popup" height="43" width="162" flip="Horizontally" color="96,32,32,128"/>
+          <sprite depth="4" name="Icon" atlas="ItemIconAtlas" sprite="{bufficon|once}" size="36,32" pos="8,-4"/>
+          <label depth="8" pos="50,-8" font_size="15" color="[white]" pivot="topleft" height="15" text="{buffname|once}"/>
+          <label depth="8" pos="50,-26" font_size="15" color="[white]" pivot="topleft" height="15" text="{buffdisplayinfo}"/>
         </rect>
       </grid>
     </grid>
+    <!-- BuffPopoutList -->
+    <!--
+    <grid pos="9,262" rows="1" cols="1" width="168" cell_width="86" cell_height="46" repeat_content="false" side="left">
+      <grid controller="BuffPopoutList" pos="9, 9" rows="1" cols="1" width="168" cell_width="168" cell_height="48" repeat_content="true" side="left" pivot="BottomLeft">
+        <rect controller="ActiveBuffEntry" width="168" height="43" name="item" visible="false" disableautobackground="true">
+          <sprite depth="3" pos="0,0" name="Background" atlas="ItemIconAtlas" sprite="ui_game_popup" height="43" width="162" flip="Horizontally" color="96,32,32,128"/>
+          <sprite depth="4" name="Icon" atlas="ItemIconAtlas" sprite="{bufficon|once}" size="36,32" pos="8,-4"/>
+          <label depth="6" name="TextContent" pos="50,-12" font_size="20" color="[white]" pivot="topleft" height="30"/>
+          <label depth="8" pos="50,-8" font_size="15" color="[white]" pivot="topleft" height="15" text="{buffname|once}"/>
+          <label depth="8" pos="50,-26" font_size="15" color="[white]" pivot="topleft" height="15" text="{buffdisplayinfo}"/>
+        </rect>
+      </grid>
+    </grid>
+    -->
     <rect pos="140,120" width="324" height="24" controller="MapStats">
       <sprite depth="2" width="24" height="24" pos="0,0" atlas="ItemIconAtlas" sprite="ui_game_symbol_temperature" foregroundlayer="true"/>
       <label depth="2" width="50" height="24" pos="26,-2" text="{playercoretemp}" font_size="20" color="0,0,0,192"/>
